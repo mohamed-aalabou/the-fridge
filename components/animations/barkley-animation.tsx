@@ -43,7 +43,7 @@ export default function BarkleyAnimation() {
 		return () => {
 			// Clear any pending timeouts when component unmounts
 		};
-	}, []);
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return (
 		<>

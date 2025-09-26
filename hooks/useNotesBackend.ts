@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useCallback, useRef } from "react";
 import { apiClient } from "@/lib/api-client";
-import { Note, Image } from "../src/types";
+import { Note, Image } from "../lib/types";
 
 export function useNotesBackend() {
 	const [notes, setNotes] = useState<Note[]>([]);

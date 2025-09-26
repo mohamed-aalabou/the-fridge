@@ -1,7 +1,7 @@
 "use client";
 
 import { DraggableItem } from "@/components/ui/draggable-item";
-import { Image } from "../../src/types";
+import { Image } from "../../lib/types";
 import { Trash } from "lucide-react";
 
 interface ImageItemProps {

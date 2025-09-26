@@ -1,6 +1,6 @@
 "use client";
 import { DraggableItem } from "@/components/ui/draggable-item";
-import { Note } from "../../src/types";
+import { Note } from "../../lib/types";
 
 interface NoteItemProps {
 	note: Note;

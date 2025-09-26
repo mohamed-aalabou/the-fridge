@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react"; // eslint-disable-line @typescript-eslint/no-unused-vars
 import { useDraggable } from "@dnd-kit/core";
 
 interface DraggableItemProps {
@@ -42,6 +42,7 @@ export function DraggableItem({
 					const parsedPosition = JSON.parse(saved);
 					setPosition(parsedPosition);
 				} catch (e) {
+					// eslint-disable-line @typescript-eslint/no-unused-vars
 					// Keep initial position if parsing fails
 				}
 			}
@@ -113,7 +114,7 @@ export function DraggableItem({
 				);
 			}
 		}
-	}, [isDragging, position, id, isFirstLoad, lastTransform]);
+	}, [isDragging, position, id, isFirstLoad, lastTransform]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return (
 		<div

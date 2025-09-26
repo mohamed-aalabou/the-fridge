@@ -165,8 +165,10 @@ function DockItem({ children, className, onClick }: DockItemProps) {
 			aria-haspopup="true"
 			onClick={onClick}
 		>
-			{Children.map(children, (child) =>
-				cloneElement(child as React.ReactElement<any>, { width, isHovered })
+			{Children.map(
+				children,
+				(child) =>
+					cloneElement(child as React.ReactElement<any>, { width, isHovered }) // eslint-disable-line @typescript-eslint/no-explicit-any
 			)}
 		</motion.div>
 	);

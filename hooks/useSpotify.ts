@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { SpotifyApi } from "@spotify/web-api-ts-sdk";
-import { SpotifyPlaybackState, SpotifyTrack } from "../src/types";
+import { SpotifyPlaybackState, SpotifyTrack } from "../lib/types";
 
 interface UseSpotifyReturn {
 	sdk: SpotifyApi | null;
@@ -39,11 +39,16 @@ export function useSpotify(): UseSpotifyReturn {
 
 		try {
 			// Perform user authorization which will redirect to Spotify
-			await SpotifyApi.performUserAuthorization(clientId, redirectUri, [
-				"user-read-currently-playing",
-				"user-read-playback-state",
-				"user-read-private",
-			]);
+			await SpotifyApi.performUserAuthorization(
+				clientId,
+				redirectUri,
+				[
+					"user-read-currently-playing",
+					"user-read-playback-state",
+					"user-read-private",
+				],
+				window.location.origin
+			);
 		} catch (err) {
 			console.error("Spotify authentication failed:", err);
 			setError(err instanceof Error ? err.message : "Authentication failed");

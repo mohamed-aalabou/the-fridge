@@ -2,7 +2,7 @@
 
 import React from "react";
 import { DraggableItem } from "@/components/ui/draggable-item";
-import { SpotifyTrack, SpotifyPlaybackState } from "../../src/types";
+import { SpotifyTrack, SpotifyPlaybackState } from "../../lib/types";
 import { Play, Pause, ExternalLink, Music } from "lucide-react";
 
 interface MusicItemProps {
