@@ -2,6 +2,36 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+### Spotify Integration Setup
+
+To enable the Spotify music player functionality, you'll need to:
+
+1. **Create a Spotify App:**
+
+   - Go to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
+   - Create a new app
+   - Note down your Client ID
+
+2. **Set up Environment Variables:**
+   Create a `.env.local` file in the root directory with:
+
+   ```
+   NEXT_PUBLIC_SPOTIFY_CLIENT_ID=your_spotify_client_id_here
+   ```
+
+3. **Configure Redirect URI:**
+
+   - In your Spotify app settings, add `http://localhost:3000` as a redirect URI
+   - For production, add your production domain
+
+4. **Required Spotify Scopes:**
+   The app requests these scopes:
+   - `user-read-currently-playing` - To get the currently playing track
+   - `user-read-playback-state` - To get playback state information
+   - `user-read-private` - To access user profile information
+
+### Running the Development Server
+
 First, run the development server:
 
 ```bash

@@ -1,0 +1,51 @@
+name = "the-fridge-backend"
+main = "src/index.ts"
+compatibility_date = "2024-04-03"
+
+[env.development]
+name = "the-fridge-backend-dev"
+
+[env.production]
+name = "the-fridge-backend-prod"
+
+[[env.production.kv_namespaces]]
+binding = "NOTES_KV"
+id = "a6bf9cbedf1d4a76bc9fc7956ece9ccd"
+preview_id = "a6bf9cbedf1d4a76bc9fc7956ece9ccd"
+
+[[env.production.d1_databases]]
+binding = "NOTES_DB"
+database_name = "the-fridge-notes"
+database_id = "42f861b9-3287-4b88-9082-e368469c2b46"
+
+[[env.production.durable_objects.bindings]]
+name = "NOTES_ROOM"
+class_name = "NotesRoom"
+
+[[env.production.r2_buckets]]
+binding = "IMAGES_BUCKET"
+bucket_name = "the-fridge-images"
+preview_bucket_name = "the-fridge-images-dev"
+
+[[kv_namespaces]]
+binding = "NOTES_KV"
+id = "a6bf9cbedf1d4a76bc9fc7956ece9ccd"
+preview_id = "a6bf9cbedf1d4a76bc9fc7956ece9ccd"
+
+[[d1_databases]]
+binding = "NOTES_DB"
+database_name = "the-fridge-notes"
+database_id = "42f861b9-3287-4b88-9082-e368469c2b46"
+
+[[durable_objects.bindings]]
+name = "NOTES_ROOM"
+class_name = "NotesRoom"
+
+[[r2_buckets]]
+binding = "IMAGES_BUCKET"
+bucket_name = "the-fridge-images"
+preview_bucket_name = "the-fridge-images-dev"
+
+[[migrations]]
+tag = "do-v1"
+new_sqlite_classes = ["NotesRoom"]
