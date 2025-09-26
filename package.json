@@ -17,6 +17,7 @@
 		"@dnd-kit/core": "^6.3.1",
 		"@radix-ui/react-scroll-area": "^1.2.10",
 		"@radix-ui/react-slot": "^1.2.3",
+		"@spotify/web-api-ts-sdk": "^1.6.0",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
 		"jotai": "^2.14.0",
